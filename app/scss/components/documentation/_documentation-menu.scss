@@ -1,0 +1,112 @@
+.documentation-menu{
+  width: 360px;
+  flex-shrink: 0;
+  background: var(--grey2);
+  padding: 40px 32px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  border-radius: 32px;
+  margin-right: 40px;
+  @include  slaptop{
+    width: 291px;
+    margin-right: 24px;
+  }
+  @include  tablet{
+    position: absolute;
+    display: none;
+    width: 100%;
+    padding: 16px;
+    top: 110%;
+    border-radius: 16px;
+    z-index: 1;
+
+
+
+  }
+ &-wrapper{
+   position: relative;
+   @include tablet{
+     width: 100%;
+     margin-bottom: 24px;
+
+   }
+   .current{
+     display: none;
+     @include tablet{
+       display: block;
+       background-color: var(--grey2);
+       width: 100%;
+       border: 0;
+       border-radius: 16px;
+       background: var(--grey2);
+       height: 54px;
+       line-height: 54px;
+       font-size: 16px;
+       padding-left: 18px;
+       padding-right: 30px;
+       font-weight: 700;
+       color:var(--yellow);
+       position: relative;
+       &:after{
+         content: "";
+         display: block;
+         height: 0;
+         width: 0;
+         position: absolute;
+         border: 5px solid transparent;
+         border-right: 5px solid var(--white);
+         border-bottom: 5px solid var(--white);
+         opacity: .64;
+         right: 24px;
+         top: 50%;
+         transform: rotate(-135deg);
+
+         transition: all .15s ease-in-out;
+         margin-top: -4px;
+         pointer-events: none;
+
+       }
+     }
+
+
+   }
+   &.open{
+     .current:after{
+       transform: rotate(45deg);
+     }
+   }
+ }
+  .menu-item{
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+
+    @include  tablet{
+      padding-top: 0;
+      padding-bottom: 0;
+      font-weight: 400;
+      font-size: 14px;
+      margin-bottom: 8px;
+      border-bottom: 0;
+    }
+    &:first-child{
+      padding-top: 0;
+    }
+    &:last-child{
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+    a{
+      color:var(--white);
+    }
+    &.active,&:hover{
+      a{
+        color:var(--yellow);
+      }
+    }
+  }
+
+
+
+}

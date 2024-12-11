@@ -1,0 +1,207 @@
+.documentation-page{
+  padding-top: 60px;
+  padding-bottom: 120px;
+  background-image: url("../img/lines.svg");
+  background-repeat: repeat-y;
+  background-size: 1200px;
+  background-position: center;
+  @media (max-width: 1280px) {
+    background-size: calc(100% - 80px);
+  }
+  @include mobile{
+    background-size: calc(100% - 48px);
+    padding-bottom: 80px;
+    padding-top: 32px;
+  }
+  .container{
+    position: relative;
+  }
+  .decor-mint {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--mint);
+    box-shadow: 0 0 0 3px rgba(51, 255, 204, 0.5), 0 0 0 5px rgba(51, 255, 204, 0.1);
+    top: -62px;
+    left: 34%;
+    z-index: -1;
+    @include tablet {
+      bottom: -26px;
+    }
+  }
+  .decor-red {
+    position: absolute;
+    bottom: -50px;
+    left: 34px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--red);
+    box-shadow: 0 0 0 2px rgba(225, 22, 22, 0.5), 0 0 0 4px rgba(225, 22, 22, 0.1);
+    z-index: -1;
+    @include mobile {
+      left: 24px;
+    }
+  }
+
+  .decor-yellow1 {
+    bottom:-20px;
+    position: absolute;
+    right: 34px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--yellow);
+    box-shadow: 0 0 0 2px rgba(255, 193, 7, 0.5), 0 0 0 4px rgba(255, 193, 7, 0.1);
+    z-index: 0;
+    @include mobile {
+      right: 18px;
+    }
+  }
+}
+.documentation-page-inner{
+
+  display: flex;
+  align-items: flex-start;
+  @include  tablet{
+    flex-direction: column;
+  }
+  .custom-select{
+    display: none;
+    @include  tablet{
+      display: block;
+      margin-bottom: 40px;
+      width: 100%;
+    }
+  }
+  p{
+    margin-bottom: 24px;
+  }
+  h2{
+    font-size: 32px;
+    line-height: 39px;
+    margin-bottom: 24px;
+    @include mobile {
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+
+
+
+
+}
+.example{
+  padding: 40px;
+  font-family: var(--montserrat);
+  background:var(--grey2) ;
+  margin-bottom: 24px;
+  width: 100%;
+  display: block;
+  white-space: pre-wrap;
+  word-break: break-all;
+  border-radius: 24px;
+  @include  mobile{
+    padding: 24px;
+    border-radius: 16px;
+
+  }
+}
+.api-table {
+  display: table;
+  width: 100%;
+  border-radius: 24px;
+  background-color: var(--grey2);
+  border-radius: 24px;
+
+  @include mobile {
+    display: block;
+    background-color: unset;
+  }
+  &__row {
+    display: table-row;
+
+    border-radius: 24px;
+    @include mobile {
+      background-color: var(--grey2);
+      display: block;
+      padding-left: 24px;
+      padding-right: 24px;
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+    &:not(:last-child) {
+      .api-table__cell {
+        border-bottom: 1px solid rgba(139, 137, 150, 0.4);
+
+        @include mobile {
+          border-bottom: 0;
+          &:not(:last-child) {
+            border-bottom: 1px solid rgba(139, 137, 150, 0.4);
+          }
+        }
+      }
+    }
+
+  }
+  &__cell {
+    display: table-cell;
+    //background: var(--grey2);
+    padding: 24px 0;
+    text-align: center;
+    vertical-align: middle;
+
+    @include mobile {
+      display: block;
+      text-align: left;
+    }
+    .api-table__cell-inner{
+      padding-left: 24px;
+      padding-right: 24px;
+      @include  mobile{
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+    &:not(:last-child) {
+      .api-table__cell-inner{
+        border-right: 1px solid rgba(139, 137, 150, 0.4);
+        @include  mobile{
+          border: 0;
+        }
+      }
+      @include mobile {
+        border-right: 0;
+        border-bottom: 1px solid rgba(139, 137, 150, 0.4);
+      }
+    }
+    &:first-child {
+      font-size: 14px;
+      line-height: 17px;
+      font-weight: 700;
+      text-align:left;
+
+
+    }
+    .required {
+      color: var(--sky);
+      white-space: nowrap;
+    }
+  }
+}
+.request-block{
+  margin-bottom: 24px;
+  .line{
+    margin-bottom: 24px;
+    .method{
+      background:#2CC256;
+      border-radius: 8px;
+      color: #fff;
+      padding: 8px 12px;
+      display: inline-block;
+      margin-left: 16px;
+    }
+  }
+}

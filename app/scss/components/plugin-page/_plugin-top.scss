@@ -1,0 +1,106 @@
+.plugin-top {
+    padding-top: 80px;
+    padding-bottom: 60px;
+    background-image: url("../img/lines.svg");
+    background-repeat: repeat-y;
+    background-size: 1200px;
+    background-position:center;
+    @media(max-width: 1280px){
+        background-size: calc(100% - 80px);
+    }
+    @include mobile {
+        padding-top: 40px;
+        background-size: calc(100% - 48px)
+    }
+    .container{
+        position: relative;
+    }
+    .decor-right {
+        position: absolute;
+        width: 33.1%;
+        height: 100%;
+        top: -120px;
+        right: -6.3%;
+        background-image: url("../img/top-cells-right.svg");
+        // background-color: red;
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: -2;
+        @include ipad{
+            width: 33.1%;
+            height: 100%;
+            top: -120px;
+            right: 2.1%;
+        }
+        @include tablet {
+            width: 42.4%;
+            height: 100%;
+            top: -90px;
+            right: 2.5%;
+        }
+        @include mobile {
+            width: 75%;
+            right: 64px;
+            height: 100%;
+            top: -84px;
+        }
+    }
+    &-inner{
+        text-align: center;
+        position: relative;
+        &:before {
+            position: absolute;
+            content: "";
+            width: 310px;
+            height: 310px;
+            background-color: var(--mint);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            opacity: 0.16;
+            filter: blur(120px);
+            z-index: -1;
+            transform: translateY(-50%);
+        }
+        &:after {
+            position: absolute;
+            content: "";
+            width: 310px;
+            height: 310px;
+            background-color: var(--yellow);
+            border-radius: 50%;
+            top: 50%;
+            right: 50%;
+            opacity: 0.16;
+            filter: blur(120px);
+            z-index: -1;
+            transform: translateY(-50%);
+        }
+        .title-wrapper {     
+            margin-bottom: 24px;
+        }
+        .subtitle {
+            margin-bottom: 24px;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+        }
+        .text{
+            margin-bottom: 24px;
+        }
+        .button-wrapper{
+            @include mobile{
+                display: flex;
+                flex-direction: column;
+            }
+            .btn:first-child{
+                margin-right: 16px;
+                @include mobile{
+                    margin-right: 0;
+                    margin-bottom: 16px;
+                }
+
+            }
+        }
+    }
+}

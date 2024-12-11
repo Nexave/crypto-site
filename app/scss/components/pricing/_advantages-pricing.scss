@@ -1,0 +1,89 @@
+.advantages-pricing {
+    background-image: url("../img/lines.svg");
+    background-repeat: repeat-y;
+    background-size: 1200px;
+    background-position: center;
+    padding-bottom: 101px;
+    @media (max-width: 1280px) {
+        background-size: calc(100% - 80px);
+    }
+    
+    @include tablet {
+        padding-bottom: 72px;
+    }
+    @include mobile {
+        padding-bottom: 64px;
+        background-size: calc(100% - 48px);
+    }
+    .container{
+        position: relative;
+    }
+    .list {
+        background-color: var(--grey2);
+        padding: 56px;
+        border-radius: 32px;
+        display: flex;
+        justify-content: space-between;
+        @include tablet{
+            padding: 32px;
+        }
+        @include mobile{
+            padding: 40px;
+            flex-direction: column;
+        }
+        .item {
+            width: calc((100% - 64px) / 3);
+            @include tablet{
+                width: calc((100% - 48px) / 3);
+            }
+            @include mobile{
+                width: 100%;
+                margin-bottom: 56px;
+            }
+            &:last-child{
+                @include mobile{
+                    margin-bottom: 0;
+                }
+            }
+            .text {
+                margin-top: 8px;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 24px;
+                @include tablet{
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+            }
+        }
+    }
+    .decor-mint {
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: var(--mint);
+        box-shadow: 0 0 0 3px rgba(51, 255, 204, 0.5), 0 0 0 5px rgba(51, 255, 204, 0.1);
+        bottom: -71px;
+        left: 34%;
+        z-index: -1;
+        @include tablet{
+            bottom: -26px;
+        }
+        
+    }
+    .decor-yellow {
+        bottom: -26px;
+        position: absolute;
+        right: 34px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: var(--yellow);
+        box-shadow: 0 0 0 2px rgba(255, 193, 7, 0.5), 0 0 0 4px rgba(255, 193, 7, 0.1);
+        z-index: -1;
+        @include mobile{
+            right: 18px;
+        }
+    }
+}

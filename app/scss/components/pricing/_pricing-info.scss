@@ -1,0 +1,186 @@
+.pricing-info {
+    padding-bottom: 100px;
+    background-image: url("../img/lines.svg");
+    background-repeat: repeat-y;
+    background-size: 1200px;
+    background-position: center;
+    @media (max-width: 1280px) {
+        background-size: calc(100% - 80px);
+    }
+    @include mobile {
+        padding-bottom: 90px;
+        background-size: calc(100% - 48px);
+    }
+    .container{
+        position: relative;      
+    }
+    .decor-red {
+        position: absolute;
+       bottom: 0;
+        left: 34px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: var(--red);
+        box-shadow: 0 0 0 2px rgba(225, 22, 22, 0.5), 0 0 0 4px rgba(225, 22, 22, 0.1);
+        z-index: -1;
+        @include mobile{
+            left:18px;
+            top: 38.8%;
+        }
+    }
+    .decor-yellow {
+        bottom: 0;
+        position: absolute;
+        right: 34px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: var(--yellow);
+        box-shadow: 0 0 0 2px rgba(255, 193, 7, 0.5), 0 0 0 4px rgba(255, 193, 7, 0.1);
+        z-index: 0;
+        @include mobile{
+            right: 18px;
+        }
+    }
+    .pricing-mobile {
+        text-align: center;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.6;
+        color: #ffffff;
+        padding-bottom: 32px;
+       
+    }
+    .pricing-table {
+        display: table;
+        width: 100%;
+        border-collapse: collapse;
+        overflow: hidden;
+        @include mobile {
+            table-layout: fixed;
+        }
+        &__pc {
+            @include mobile {
+                display: none;
+            }
+        }
+        &__mobile {
+            display: none;
+            @include mobile {
+                display: block;
+            }
+            &:not(:last-child) {
+                margin-bottom: 56px;
+            }
+        }
+        &__row {
+            display: table-row;
+            &:nth-child(2){
+                .pricing-table__cell{
+                    padding-top: 0;
+                    @include mobile{
+                        padding-top: 16px;
+                    }
+                }
+            }
+            &:not(:last-child) {
+                .pricing-table__cell {
+                    border-bottom: 1px solid rgba(139, 137, 150, 0.4);
+                }
+            }
+            &.head {
+                .pricing-table__cell {
+                    color: #fff;
+                    font-size: 14px;
+                    line-height: 160%;
+                    font-weight: 400;
+                    border: 0;
+                    @include mobile {
+                        padding: 32px 10px;
+                    }
+                }
+            }
+        }
+        &__cell {
+            display: table-cell;
+            text-align: center;
+            padding: 22px 0;
+            vertical-align: middle;
+            
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+            @include tablet{
+                padding: 16px 0;
+            }
+            &-inner {
+                height: 80px;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               @include tablet{
+                   height: 64px;
+               }
+               @include mobile{
+                   height: 40px;
+               }
+            }
+
+            &:first-child {
+                text-align: left;
+                width: 261px;
+                @include tablet{
+                    width: 213px;
+                }
+                @include mobile{
+                    width: auto;
+                }
+                .pricing-table__cell-inner{
+                    font-size: 20px;
+                    justify-content: flex-start;
+                }
+               
+            }
+            
+            &:not(:last-child) {
+                position: relative;
+                .pricing-table__cell-inner {
+                   
+                    border-right: 1px solid rgba(139, 137, 150, 0.4);
+                }
+            }
+            .name-crypt {
+                display: flex;
+                align-items: center;
+                font-size: 20px;
+                white-space: nowrap;
+
+                @include mobile{
+                    font-size: 16px;
+                }
+                .icon {
+                    width: 80px;
+
+                    height: 80px;
+                    flex-shrink: 0;
+                    margin-right: 24px;
+                    font-size: 0;
+                    img{
+                        width: 100%;
+                        height: auto;
+                    }
+                    @include tablet{
+                        margin-right: 5px;
+                        width: 64px;
+                        height: 64px;
+                    }
+                    @include mobile{
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+            }
+        }
+    }
+}

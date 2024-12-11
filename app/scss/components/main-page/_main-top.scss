@@ -1,0 +1,274 @@
+.main-top {
+    padding-top: 80px;
+    padding-bottom: 77px;
+    position: relative;
+    z-index: 1;
+    background-image: url("../img/lines.svg");
+    background-repeat: repeat-y;
+    background-size: 1200px;
+    background-position: center;
+    @media (max-width: 1280px) {
+        background-size: calc(100% - 80px);
+    }
+    @include slaptop {
+        padding-top: 64px;
+    }
+    @include tablet {
+        padding-top: 40px;
+    }
+    @include mobile{
+        background-size: calc(100% - 48px)
+    }
+    &-inner {
+        display: flex;
+        position: relative;
+        z-index: 2;
+        align-items: center;
+
+        @include tablet {
+            flex-direction: column;
+        }
+        .decor-right {
+            position: absolute;
+
+            width: 34.1%;
+            height: 54.9%;
+            top: -165.5px;
+            right: -9.9%;
+            background-image: url("../img/top-cells-right.svg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: -2;
+            @include tablet {
+                width: 47.1%;
+                height: 37.9%;
+                top: -103.5px;
+                right: -1.7%;
+            }
+            @include mobile {
+                width: 100%;
+                right: 40px;
+                height: 200px;
+                top: -84px;
+            }
+            // @include slaptop {
+            //     top: -212.5px;
+            //     right: -1.9%;
+            // }
+            // @include tablet {
+            //     top: 15.5px;
+            //     right: -1.9%;
+            //     width: 129%;
+            //     height: 106%;
+            // }
+            // @include mobile {
+            //     top: 385.5px;
+            //     right: auto;
+            //     left: -80px;
+            //     width: 100%;
+            //     height: 65%;
+            //     background-size: contain;
+
+            // }
+            .decor-red {
+                position: absolute;
+                top: 54%;
+                right: 25%;
+                width: 38px;
+                height: 38px;
+                background-color: var(--red);
+                border-radius: 50%;
+                box-shadow: 0 0 0 6px rgba(225, 22, 22, 0.5), 0 0 0 11px rgba(225, 22, 22, 0.1);
+                @include tablet{
+                    top: 45%;
+                    right: 15%;
+                }
+                @include mobile{
+                    display:  none;
+                }
+            }
+            .decor-white {
+                position: absolute;
+                width: 19px;
+                height: 19px;
+                background-color: var(--white);
+                border-radius: 50%;
+                box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.5), 0 0 0 11px rgba(255, 255, 255, 0.1);
+                top: 260%;
+                right: 26%;
+                @include tablet{
+                    top:auto;
+                    bottom: -199%;
+                    right: 21%;
+                }
+                
+            }
+        }
+        .decor-left {
+            position: absolute;
+
+            width: 66.8%;
+            height: 97%;
+            top: 197.5px;
+            right: 19.1%;
+            background-image: url("../img/top-cells-left.svg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: -2;
+            @include tablet {
+                height: 76%;
+                top: 346.5px;
+                right: auto;
+                left: 5%;
+
+                
+            }
+            @include mobile{
+                width: 100%;
+                left: -13%;
+                height: 230px;
+                top: auto;
+                bottom: -65px;
+            }
+            // @include slaptop {
+            //     top: -212.5px;
+            //     right: -1.9%;
+            // }
+            // @include tablet {
+            //     top: 15.5px;
+            //     right: -1.9%;
+            //     width: 129%;
+            //     height: 106%;
+            // }
+            // @include mobile {
+            //     top: 385.5px;
+            //     right: auto;
+            //     left: -80px;
+            //     width: 100%;
+            //     height: 65%;
+            //     background-size: contain;
+            // }
+            .decor-yellow {
+                position: absolute;
+                width: 28px;
+                height: 28px;
+                border-radius: 50%;
+                background-color: var(--yellow);
+                box-shadow: 0 0 0 4px rgba(255, 193, 7, 0.5), 0 0 0 9px rgba(255, 193, 7, 0.1);
+                top: 67%;
+                left: 27%;
+                @include tablet {
+                    top: 65%;
+                    left: 15%;
+                }
+                @include mobile{
+                    top: 61%;
+                    left: 23%;
+                }
+            }
+            .decor-mint {
+                position: absolute;
+                width: 17px;
+                height: 17px;
+                border-radius: 50%;
+                background-color: var(--mint);
+                box-shadow: 0 0 0 3px rgba(51, 255, 204, 0.5), 0 0 0 5px rgba(51, 255, 204, 0.1);
+                top: 21.6%;
+                left: 53.5%;
+                @include tablet {
+                    top: 15%;
+                    left: 22%;
+                
+                }
+                @include mobile{
+                    display:  none;
+                }
+            }
+        }
+        .left-block {
+            width: 50%;
+            padding-right: 12px;
+            @include tablet {
+                width: 100%;
+                max-width: 472px;
+                align-self: flex-start;
+            }
+            @include mobile {
+                max-width: unset;
+                padding-right: 0;
+            }
+            .title-wrapper {
+                margin-bottom: 40px;
+                @include slaptop {
+                    margin-bottom: 24px;
+                }
+            }
+            .text {
+                margin-bottom: 40px;
+                @include slaptop {
+                    margin-bottom: 24px;
+                }
+            }
+            .button-wrapper {
+                display: flex;
+                @include mobile {
+                    flex-direction: column;
+                }
+                .btn:first-child {
+                    margin-right: 16px;
+                    @include mobile {
+                        margin-right: 0;
+                        margin-bottom: 8px;
+                    }
+                }
+            }
+        }
+        .right-block {
+            width: 50%;
+            padding-left: 12px;
+            position: relative;
+            z-index: 2;
+            @include slaptop {
+                width: auto;
+                flex-shrink: 3;
+                flex-grow: 0;
+            }
+            @include tablet {
+                align-self: flex-end;
+                margin-top: 22px;
+            }
+            @include mobile {
+                margin-top: 32px;
+            }
+            &:after {
+                position: absolute;
+                content: "";
+                width: 310px;
+                height: 310px;
+                left: 0;
+                top: 0;
+                background-color: var(--yellow);
+                opacity: 0.1;
+                filter: blur(120px);
+                z-index: -1;
+            }
+            &::before {
+                position: absolute;
+                content: "";
+                width: 310px;
+                height: 310px;
+                right: 0;
+                bottom: 0;
+                background-color: var(--red);
+                opacity: 0.2;
+                filter: blur(120px);
+                transform: translateX(50%);
+                z-index: -1;
+            }
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}

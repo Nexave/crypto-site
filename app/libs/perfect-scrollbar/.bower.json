@@ -1,0 +1,15 @@
+{
+  "name": "perfect-scrollbar",
+  "homepage": "https://github.com/mdbootstrap/perfect-scrollbar",
+  "version": "1.5.1",
+  "_release": "1.5.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.5.1",
+    "commit": "cbe82266caceb3b873cfa42730957150ceb3218c"
+  },
+  "_source": "https://github.com/mdbootstrap/perfect-scrollbar.git",
+  "_target": "^1.5.1",
+  "_originalSource": "https://github.com/mdbootstrap/perfect-scrollbar.git",
+  "_direct": true
+}

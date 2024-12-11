@@ -1,0 +1,174 @@
+.reviews {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    position: relative;
+    background-image: url("../img/lines.svg");
+    background-repeat: repeat-y;
+    background-size: 1200px;
+    background-position: center;
+    position: relative;
+
+    @media (max-width: 1280px) {
+        background-size: calc(100% - 80px);
+    }
+    @include tablet {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    @include mobile {
+        padding-bottom: 132px;
+        background-size: calc(100% - 48px)
+    }
+
+    .title-wrapper {
+        margin-bottom: 24px;
+    }
+    .description {
+        max-width: 588px;
+    }
+    .reviews-slider {
+        margin-top: 64px;
+        position: relative;
+        z-index: 0;
+        &:before {
+            position: absolute;
+            content: "";
+            right: 0;
+            width: 160px;
+            height: 100%;
+            background: linear-gradient(270deg, #262d37 0%, rgba(38, 45, 55, 0) 100%);
+            z-index: 3;
+            @include mobile {
+                display: none;
+            }
+        }
+        .reviews-item {
+            width: 471px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 24px;
+            background-color: var(--grey2);
+            border-radius: 32px 32px 0px 23px;
+            height: auto;
+            flex-grow: 1;
+            .review-info {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-top: 24px;
+            }
+
+            .title {
+                margin-bottom: 24px;
+            }
+            .author-info {
+                display: flex;
+                align-items: center;
+            }
+            .author-img {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                margin-right: 13px;
+                box-shadow: 0px 0px 0px 1px rgba(51, 255, 204, 1), 0px 0px 0px 4px rgba(51, 255, 204, 0.1);
+            }
+            .author-name {
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 17px;
+            }
+            .stars-wrapper {
+                display: flex;
+                align-items: center;
+            }
+            &.swiper-slide-active {
+                background-color: var(--yellow);
+                color: var(--grey3);
+                transition: all 0.4s ease;
+                svg path {
+                    fill: var(--red);
+                }
+                .author-img {
+                    box-shadow: 0px 0px 0px 1px #262d37, 0px 0px 0px 4px rgba(38, 45, 55, 0.1);
+                }
+            }
+        }
+        .swiper-wrapper {
+            align-items: stretch;
+            position: relative;
+            padding-left: 10px;
+            @include mobile {
+                padding-left: 0;
+            }
+        }
+    }
+    .reviews-nav {
+        display: flex;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        @include mobile {
+            right: 24px;
+            bottom: 72px;
+        }
+
+        .next,
+        .prev {
+            cursor: pointer;
+            flex-shrink: 0;
+            background: var(--grey2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            width: 40px;
+            height: 40px;
+            margin-left: 8px;
+        }
+        .prev {
+            transform: rotateZ(180deg);
+            background-color: var(--grey1);
+            img {
+                opacity: 0.4;
+            }
+        }
+    }
+    .reviews-inner {
+        position: relative;
+        padding-right: 88px;
+        @include mobile {
+            position: static;
+            padding-right: 0;
+        }
+        .decor-red {
+            position: absolute;
+            top: -32px;
+            left: -3px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--red);
+            box-shadow: 0 0 0 2px rgba(225, 22, 22, 0.5), 0 0 0 4px rgba(225, 22, 22, 0.1);
+            z-index: -1;
+            @include mobile{
+                left: 24px;
+            }
+        }
+
+        .decor-yellow {
+            top: -32px;
+            position: absolute;
+            right: -6px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--yellow);
+            box-shadow: 0 0 0 2px rgba(255, 193, 7, 0.5), 0 0 0 4px rgba(255, 193, 7, 0.1);
+            z-index: -1;
+            @include mobile{
+                right: 24px;
+            }
+        }
+    }
+}

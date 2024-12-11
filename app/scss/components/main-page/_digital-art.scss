@@ -1,0 +1,91 @@
+.digital-art{
+    padding-top: 60px;
+    padding-bottom: 120px;
+    background-image: url("../img/lines.svg");
+    background-repeat: repeat-y;
+    background-size: 1200px;
+    background-position:center;
+  
+    @media(max-width: 1280px){
+        background-size: calc(100% - 80px);
+    }
+    @include mobile{
+        background-size: calc(100% - 48px)
+    }
+    &-inner{
+        position: relative;
+        padding-left: 246px;
+        padding-right: 246px;
+        @include slaptop{
+            padding-left: 118px;
+            padding-right: 118px;
+        }
+        @include tablet{
+            padding-left: 0;
+            padding-right: 0;
+        }
+        @include mobile{
+            padding-left: 46px;
+            padding-right: 46px;
+        }
+        .decor-red {
+            position: absolute;
+            top: 50%;
+            left: -3px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--red);
+            box-shadow: 0 0 0 2px rgba(225, 22, 22, 0.5), 0 0 0 4px rgba(225, 22, 22, 0.1);
+            z-index: -1;
+        }
+
+        .decor-yellow {
+            bottom: 0px;
+            position: absolute;
+            right: -6px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--yellow);
+            box-shadow: 0 0 0 2px rgba(255, 193, 7, 0.5), 0 0 0 4px rgba(255, 193, 7, 0.1);
+            z-index: -1;
+        }
+    }
+    .title-wrapper{
+        text-align: center;
+        margin-bottom: 64px;
+        @include slaptop{
+            margin-bottom: 40px;
+        }
+    }
+    &-items-wrapper{
+        display: flex;
+        justify-content: space-between;
+        @include mobile{
+            flex-direction: column;
+        }
+    }
+    &-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: calc((100% - 48px) /3);
+       text-align: center;
+       padding-left: 10px;
+       padding-right: 10px;
+       @include tablet{
+        width: calc((100% - 32px) /3);
+       }
+       @include mobile{
+           width: 100%;
+           margin-bottom: 40px;
+       }
+       .item-icon{
+           margin-bottom: 16px;
+       }
+       .text{
+           margin-bottom: 16px;
+       }
+    }
+}

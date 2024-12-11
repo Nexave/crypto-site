@@ -1,0 +1,50 @@
+.plugin-start{
+    padding-top:80px;
+    padding-bottom: 160px;
+    background-image: url("../img/lines.svg");
+    background-repeat: repeat-y;
+    background-size: 1200px;
+    background-position:center;
+    @media(max-width: 1280px){
+        background-size: calc(100% - 80px);
+    }
+    @include tablet{
+        padding-top: 60px;
+    }
+    @include mobile{
+        padding-bottom: 120px;
+        background-size: calc(100% - 48px)
+    }
+    .container{
+        position: relative;
+    }
+    .decor-mint {
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: var(--mint);
+        box-shadow: 0 0 0 3px rgba(51, 255, 204, 0.5), 0 0 0 5px rgba(51, 255, 204, 0.1);
+        bottom: -50px;
+        left: 34%;
+        z-index: -1;
+        @include tablet {
+            bottom: -26px;
+        }
+    }
+    &-inner{
+        padding: 64px 24px;
+        background-color: var(--grey2);
+        border-radius: 40px;
+        text-align: center;
+        @include mobile{
+            padding: 32px 24px;
+        }
+        .title-wrapper{
+            margin-bottom: 24px;
+        }
+        .text{
+            margin-bottom: 24px;
+        }
+    }
+}

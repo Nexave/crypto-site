@@ -1,0 +1,19 @@
+.more-link {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--mint);
+    position: relative;
+    &::after{
+        position: absolute;
+        content: "";
+        right: -8px;
+        top: 50%;
+        background: url('../img/main-page/chevron-right.svg') no-repeat;
+        
+        background-size: contain;
+        width: 10px;
+        height:10px;
+        transform: translateX(100%) translateY(-50%);
+    }
+}

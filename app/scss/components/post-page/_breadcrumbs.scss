@@ -1,0 +1,17 @@
+.breadcrumbs{
+    &-item{
+        color:var(--white);
+        font-weight: 700;
+        &:after{
+            content: "/";
+            vertical-align: text-top;
+            padding-left: 2px;
+        }
+        &:last-child{
+            color: var(--yellow);
+            &:after{
+                display: none;
+            }
+        }
+    }
+}

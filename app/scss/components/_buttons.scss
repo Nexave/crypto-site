@@ -1,0 +1,106 @@
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    
+    box-sizing: border-box;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 12px;
+    box-sizing: border-box;
+    font-family: var(--montserrat);
+    white-space: nowrap;
+    @include slaptop{
+        padding:  0 16px;
+    }
+    
+    &-yellow{
+        background-color: var(--yellow);
+        line-height: 50px;
+        color: var(--grey2);
+        border:2px solid var(--yellow) ;
+        transition: all 0.4s ease;
+        padding: 0 24px 0px 24px;
+        @include slaptop{
+            line-height: 40px;
+            
+        }
+        svg path{
+            fill: var(--grey2);
+        }
+        &:hover{
+            background-color: transparent;
+            color: var(--yellow);
+
+            svg path{
+                fill: var(--yellow);
+            }
+        }
+        
+
+    }
+    &-mint{
+        background-color: var(--mint);
+        border: 2px solid var(--mint);
+        color: var(--grey2);
+        line-height: 52px;
+        transition: all 0.4s ease;
+        padding: 0 11px 0px 24px;
+        @include slaptop{
+            line-height: 44px;
+            font-size: 14px;
+        }
+        svg{
+            margin-bottom: -6px;
+            margin-left: 12px;
+            width: 24px;
+            height: 24px;
+            @include slaptop{
+                margin-left: 16px;
+            }
+        }
+        svg path{
+            fill: var(--grey2);
+        }
+        &:hover{
+            color:var(--mint);
+            background-color: transparent;
+            svg path{
+                fill: var(--mint);
+            }
+        }
+    }
+    &-mint-transparent{
+        line-height: 52px;
+        background-color: transparent;
+        border: 2px solid var(--mint);
+        color: var(--mint);
+        transition: all 0.4s ease;
+        padding: 0 11px 0px 24px;
+        @include slaptop{
+            line-height: 42px;
+            font-size: 14px;
+        }
+        svg{
+            margin-bottom: -6px;
+            width: 24px;
+            height: 24px;
+            margin-left: 12px;
+            @include slaptop{
+                margin-left: 16px;
+            }
+
+        }
+        svg path{
+            fill: var(--mint);
+        }
+        &:hover{
+            background-color: var(--mint);
+            color: var(--grey2);
+            svg path{
+                fill: var(--grey2);
+            }
+        }
+    }
+
+}

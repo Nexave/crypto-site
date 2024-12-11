@@ -1,0 +1,128 @@
+.video-section {
+    padding-top: 60px;
+    padding-bottom: 80px;
+    background-image: url("../img/lines.svg");
+    background-repeat: repeat-y;
+    background-size: 1200px;
+    background-position: center;
+    @media (max-width: 1280px) {
+        background-size: calc(100% - 80px);
+    }
+    @include mobile {
+        padding-bottom: 60px;
+        background-size: calc(100% - 48px);
+    }
+    .container {
+        position: relative;
+    }
+    .decor-red {
+        position: absolute;
+        top: -62px;
+        left: 34px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: var(--red);
+        box-shadow: 0 0 0 2px rgba(225, 22, 22, 0.5), 0 0 0 4px rgba(225, 22, 22, 0.1);
+        z-index: -1;
+        @include mobile {
+            left: 24px;
+        }
+    }
+
+    .decor-yellow {
+        top: 22px;
+        position: absolute;
+        right: 34px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: var(--yellow);
+        box-shadow: 0 0 0 2px rgba(255, 193, 7, 0.5), 0 0 0 4px rgba(255, 193, 7, 0.1);
+        z-index: -1;
+        @include mobile {
+            right: 24px;
+        }
+    }
+    .decor-mint {
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: var(--mint);
+        box-shadow: 0 0 0 3px rgba(51, 255, 204, 0.5), 0 0 0 5px rgba(51, 255, 204, 0.1);
+        top: -20px;
+        left: 34%;
+        z-index: -1;
+        @include tablet {
+            bottom: -26px;
+        }
+    }
+    &-inner {
+        padding-left: 232px;
+        padding-right: 232px;
+        @include slaptop {
+            padding-left: 104px;
+            padding-right: 104px;
+        }
+        @include tablet {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .title-wrapper {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+    }
+    .item {
+        display: block;
+
+        @include tablet {
+            margin-bottom: 50px;
+        }
+
+        @include mobile {
+            margin-bottom: 20px;
+        }
+
+        .img-bg {
+            height: 414px;
+            width: 100%;
+            display: block;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            position: relative;
+            border-radius: 24px;
+
+            @include tablet {
+                height: 387px;
+            }
+
+            @include mobile {
+                height: 175px;
+            }
+
+            &:before {
+                cursor: pointer;
+                content: "";
+                display: block;
+                width: 80px;
+                height: 80px;
+                background: url("../img/plugin/play-circle.svg") no-repeat;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+
+                transform: translate(-50%, -50%);
+                z-index: 1;
+
+                @include mobile {
+                    width: 77px;
+                    height: 77px;
+                    background-size: contain;
+                }
+            }
+        }
+    }
+}

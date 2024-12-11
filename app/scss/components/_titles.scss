@@ -1,0 +1,47 @@
+.title {
+    font-style: normal;
+    font-weight: 700;
+    &-big {
+        font-size: 50px;
+        line-height: 61px;
+
+        @include slaptop {
+            font-size: 40px;
+            line-height: 49px;
+        }
+        @include mobile {
+            font-size: 28px;
+            line-height: 34px;
+        }
+    }
+    &-medium {
+        font-size: 32px;
+        line-height: 39px;
+        @include mobile {
+            font-size: 24px;
+            line-height: 29px;
+        }
+    }
+    img.wp-smiley, img.emoji{
+        display: inline ;
+        border: none ;
+        box-shadow: none ;
+        height: 1em ;
+        width: 1em ;
+        margin: 0 0.07em ;
+        vertical-align: -0.1em ;
+        background: none ;
+        padding: 0
+    }
+    &-small {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .text-decor {
+        background: linear-gradient(282.94deg, #ffffff 66.93%, rgba(255, 255, 255, 0.32) 100.04%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+    }
+}

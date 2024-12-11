@@ -1,0 +1,176 @@
+.post{
+    background-image: url("../img/lines.svg");
+    background-repeat: repeat-y;
+    background-size: 1200px;
+    background-position:center;
+    position: relative;
+    @media(max-width: 1280px){
+        background-size: calc(100% - 80px);
+    }
+    
+    padding-top: 40px;
+    padding-bottom: 96px;
+
+    @include tablet{
+
+        padding-bottom: 56px;
+    }
+    @include mobile{
+        padding-top: 32px;
+        padding-bottom: 40px;
+        background-size: calc(100% - 48px)
+    }
+   
+    .breadcrumbs{
+        margin-top: 29px;
+        margin-bottom: 27px;
+        @include mobile{
+            margin-top: 24px;
+        }
+    }
+    &-wrapper{
+        padding-left: 200px;
+        padding-right: 200px;
+        @include slaptop{
+            padding-left: 72px;
+            padding-right: 72px;
+    
+        }
+        @include tablet{
+            padding-left: 0;
+            padding-right: 0;
+        }
+       
+        
+    }
+    .container{
+        position: relative;
+    }
+    .date{
+        opacity: 0.64 ;
+        margin-top: 16px;
+        margin-bottom: 32px;
+    }
+    pre{
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 32px;
+        margin-bottom: 24px;
+        padding: 40px;
+        padding-top: 228px;
+        white-space: pre-wrap;
+        word-break: break-all;
+        @include tablet{
+            padding-top: 130px;
+        }
+        @include mobile{
+            font-size: 8px;
+            padding: 16px;
+            padding-top: 31px;
+            border-radius: 24px;
+        }
+    }
+    h1,h2 {
+        font-size: 50px;
+        line-height: 61px;
+
+        @include slaptop {
+            font-size: 40px;
+            line-height: 49px;
+        }
+        @include mobile {
+            font-size: 28px;
+            line-height: 34px;
+        }
+    }
+    h2{
+        margin-bottom: 32px;
+        margin-top: 64px;
+    }
+
+    h3 {
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 24px;
+    }
+    p{
+        margin-bottom: 24px;
+    }
+    .decor-right {
+        position: absolute;
+        width: 33.1%;
+        height: 12%;
+        top: -55px;
+        right: -6.3%;
+        background-image: url("../img/top-cells-right.svg");
+        // background-color: red;
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: -2;
+        @include ipad{
+            width: 33.1%;
+            height: 12%;
+            top: -55px;
+            right: -2.8%;
+        }
+        @include tablet {
+            width: 41.5%;
+            height: 10.9%;
+            top: -90px;
+            right: 3.5%;
+        }
+        @include mobile {
+            width: 75%;
+            right: 64px;
+            height: 10%;
+            top: -84px;
+        }
+    }
+    .decor-red {
+        position: absolute;
+        top: 38%;
+        left: 34px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: var(--red);
+        box-shadow: 0 0 0 2px rgba(225, 22, 22, 0.5), 0 0 0 4px rgba(225, 22, 22, 0.1);
+        z-index: -1;
+        @include tablet{
+            top:46%
+        }
+        @include mobile{
+            left:18px;
+            
+        }
+    }
+    .decor-yellow1 {
+        top: 15%;
+        position: absolute;
+        right: 34px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: var(--yellow);
+        box-shadow: 0 0 0 2px rgba(255, 193, 7, 0.5), 0 0 0 4px rgba(255, 193, 7, 0.1);
+        z-index: 0;
+        @include mobile{
+            right: 18px;
+        }
+    }
+    .decor-yellow2 {
+        top:55%;
+        position: absolute;
+        right: 34px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: var(--yellow);
+        box-shadow: 0 0 0 2px rgba(255, 193, 7, 0.5), 0 0 0 4px rgba(255, 193, 7, 0.1);
+        z-index: 0;
+        @include mobile{
+            right: 18px;
+        }
+    }
+}

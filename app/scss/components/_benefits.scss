@@ -1,0 +1,206 @@
+.benefits {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  position: relative;
+  background-image: url("../img/lines.svg");
+  background-repeat: repeat-y;
+  background-size: 1200px;
+  background-position: center;
+
+  @media(max-width: 1280px) {
+    background-size: calc(100% - 80px);
+  }
+  @include slaptop {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  @include mobile {
+    background-size: calc(100% - 48px)
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 270px;
+    height: 270px;
+    left: 0;
+    top: 193px;
+    background-color: var(--mint);
+    opacity: 0.1;
+    filter: blur(120px);
+    transform: translateX(50%);
+    z-index: -1;
+    @include tablet {
+      top: 75px;
+      left: -100px;
+    }
+  }
+
+  &-inner {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    @include tablet {
+      display: block;
+    }
+
+    .decor {
+      position: absolute;
+
+      width: 66.7%;;
+      height: 98%;
+      top: -131.5px;
+      left: 14.2%;
+      background-image: url("../img/top-cells2.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: -1;
+      max-height: 629px;
+      @include ipad {
+        left: 33px;
+      }
+      @include tablet {
+        display: none;
+      }
+    }
+
+    .title-wrapper {
+      width: 50%;
+      padding-right: 15px;
+      .title-big{
+        font-size: 45px;
+        @include slaptop{
+          font-size: 40px;
+        }
+        @include mobile{
+          font-size: 24px;
+        }
+      }
+
+      @include tablet {
+        padding-right: 0;
+        width: 100%;
+        max-width: 470px;
+        margin-bottom: 52px;
+      }
+      @include mobile {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &-items-wrapper {
+    width: 50%;
+    @include tablet {
+      width: 100%;
+    }
+
+  }
+
+  &-item {
+    margin-bottom: 48px;
+    @include mobile {
+      margin-bottom: 32px;
+    }
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    .item {
+      &-icon {
+        width: 56px;
+        height: 56px;
+        margin-bottom: 16px;
+        @include mobile {
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+    }
+
+    .title-small {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.benefits-page {
+  padding-top: 80px;
+  padding-bottom: 136px;
+  background-image: url("../img/lines.svg");
+  background-repeat: repeat-y;
+  background-size: 1200px;
+  background-position: center;
+
+  @media(max-width: 1280px) {
+    background-size: calc(100% - 80px);
+  }
+  @include slaptop {
+    padding-top: 60px;
+    padding-bottom: 96px;
+  }
+  @include mobile {
+    padding-top: 40px;
+    background-size: calc(100% - 48px)
+  }
+  .container{
+    position: relative;
+  }
+  .decor-mint {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--mint);
+    box-shadow: 0 0 0 3px rgba(51, 255, 204, 0.5), 0 0 0 5px rgba(51, 255, 204, 0.1);
+    top: -62px;
+    left: 34%;
+    z-index: -1;
+    @include tablet {
+      bottom: -26px;
+    }
+  }
+
+  .decor-red {
+    position: absolute;
+    bottom: -50px;
+    left: 34px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--red);
+    box-shadow: 0 0 0 2px rgba(225, 22, 22, 0.5), 0 0 0 4px rgba(225, 22, 22, 0.1);
+    z-index: -1;
+    @include mobile {
+      left: 24px;
+    }
+  }
+
+  .decor-yellow1 {
+    bottom: 0;
+    position: absolute;
+    right: 34px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--yellow);
+    box-shadow: 0 0 0 2px rgba(255, 193, 7, 0.5), 0 0 0 4px rgba(255, 193, 7, 0.1);
+    z-index: 0;
+    @include mobile {
+      right: 18px;
+    }
+  }
+  .benefits-items-wrapper {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+    grid-column-gap: 24px;
+    @include  mobile{
+      grid-template-columns:auto;
+    }
+  }
+
+
+}

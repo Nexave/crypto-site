@@ -1,0 +1,193 @@
+.page-data {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-image: url("../img/lines.svg");
+  background-repeat: repeat-y;
+  background-size: 1200px;
+  background-position: center;
+
+  @media(max-width: 1280px) {
+    background-size: calc(100% - 80px);
+  }
+  @include mobile {
+    background-size: calc(100% - 48px)
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .decor-mint {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--mint);
+    box-shadow: 0 0 0 3px rgba(51, 255, 204, 0.5), 0 0 0 5px rgba(51, 255, 204, 0.1);
+    top: -62px;
+    left: 34%;
+    z-index: -1;
+    @include tablet {
+      bottom: -26px;
+    }
+  }
+
+  .decor-red {
+    position: absolute;
+    bottom: -50px;
+    left: 34px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--red);
+    box-shadow: 0 0 0 2px rgba(225, 22, 22, 0.5), 0 0 0 4px rgba(225, 22, 22, 0.1);
+    z-index: -1;
+    @include mobile {
+      left: 24px;
+    }
+  }
+
+  .decor-yellow1 {
+    top: 15%;
+    position: absolute;
+    right: 34px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--yellow);
+    box-shadow: 0 0 0 2px rgba(255, 193, 7, 0.5), 0 0 0 4px rgba(255, 193, 7, 0.1);
+    z-index: 0;
+    @include mobile {
+      right: 18px;
+    }
+  }
+
+  .decor-yellow2 {
+    bottom: -50px;
+    position: absolute;
+    right: 34px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--yellow);
+    box-shadow: 0 0 0 2px rgba(255, 193, 7, 0.5), 0 0 0 4px rgba(255, 193, 7, 0.1);
+    z-index: 0;
+    @include mobile {
+      right: 18px;
+    }
+  }
+
+  .description {
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 60px;
+    align-items: center;
+    justify-content: space-between;
+    @include slaptop {
+      padding-left: 72px;
+      padding-right: 72px;
+    }
+    @include tablet {
+      padding-left: 0;
+      padding-right: 0;
+
+    }
+    @include  mobile{
+      padding-bottom: 40px;
+    }
+
+    h2 {
+      font-size: 32px;
+      line-height: 39px;
+      @include mobile {
+        font-size: 24px;
+        line-height: 29px;
+      }
+    }
+
+    h3 {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    p {
+      margin-top: 24px;
+      margin-bottom: 24px;
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      color: var(--yellow);
+    }
+  }
+
+  .address-info {
+    display: flex;
+    position: relative;
+    @include mobile {
+      display: block;
+    }
+
+    .contacts-wrapper {
+      padding: 40px 32px;
+      background: var(--grey2);
+      border-radius: 32px;
+
+      img {
+        margin-bottom: 32px;
+      }
+
+      .contact-item {
+        margin-bottom: 32px;
+
+        .name {
+          margin-bottom: 16px;
+          font-weight: 700;
+        }
+
+        .value {
+          color: var(--white);
+        }
+      }
+    }
+
+    .map {
+      overflow: hidden;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      border-radius: 32px;
+      @include mobile {
+        position: relative;
+        margin-top: -30px;
+        height: 400px;
+        border-radius: 24px;
+      }
+
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .socials {
+    max-width: 121px;
+
+    .title {
+      margin-bottom: 24px;
+    }
+  }
+
+  .social-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+}

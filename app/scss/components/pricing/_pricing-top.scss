@@ -1,0 +1,114 @@
+.pricing-top {
+    padding-top: 64px;
+    background-image: url("../img/lines.svg");
+    background-repeat: repeat-y;
+    background-size: 1200px;
+    background-position: center;
+    @media (max-width: 1280px) {
+        background-size: calc(100% - 80px);
+    }
+    @include tablet {
+        padding-top: 40px;
+    }
+    @include mobile {
+        padding-top: 32px;
+        background-size: calc(100% - 48px);
+    }
+    .container{
+        position: relative;
+
+    }
+    .decor-right {
+        position: absolute;
+        width: 33.1%;
+        height: 100%;
+        top: -120px;
+        right: -6.3%;
+        background-image: url("../img/top-cells-right.svg");
+        // background-color: red;
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: -2;
+        @include ipad{
+            width: 33.1%;
+            height: 100%;
+            top: -120px;
+            right: -3.6%;
+        }
+        @include tablet {
+            width: 41.5%;
+            height: 100%;
+            top: -90px;
+            right: 3.1%;
+        }
+        @include mobile {
+            width: 75%;
+            right: 64px;
+            height: 100%;
+            top: -84px;
+        }
+    }
+    &-inner {
+        display: flex;
+        padding-left: 126px;
+        padding-right: 126px;
+        align-items: center;
+        justify-content: space-between;
+        @include slaptop {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        @include mobile {
+            flex-direction: column;
+        }
+
+        .title {
+            white-space: nowrap;
+            @include mobile {
+                align-self: flex-start;
+            }
+        }
+        .img-block {
+            max-width: 588px;
+            height: auto;
+            flex-grow: 2;
+            font-size: 0;
+            position: relative;
+            z-index: 1;
+            &:after {
+                position: absolute;
+                content: "";
+                width: 310px;
+                height: 310px;
+                background-color: var(--mint);
+                right: 0;
+                bottom: 0;
+                border-radius: 50%;
+                z-index: -1;
+                opacity: 0.16;
+                filter: blur(120px);
+            }
+            &:before {
+                position: absolute;
+                content: "";
+                width: 310px;
+                height: 310px;
+                background-color: var(--yellow);
+                left: 0;
+                top: 0;
+                border-radius: 50%;
+                z-index: -1;
+                opacity: 0.16;
+                filter: blur(120px);
+            }
+            @include mobile {
+                width: 100%;
+                margin-top: 32px;
+            }
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
